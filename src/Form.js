@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default App = () => (
+export default Form = () => (
   <div>
     <form>
       <table>
