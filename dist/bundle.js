@@ -497,91 +497,170 @@ function checkDCE() {
 }
 });
 
-var Form = function Form() {
-  return index.createElement(
-    "div",
-    null,
-    index.createElement(
-      "form",
-      null,
-      index.createElement(
-        "table",
+var classCallCheck = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+var createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+
+
+
+
+
+
+
+
+var inherits = function (subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+
+
+
+
+
+
+
+
+
+
+var possibleConstructorReturn = function (self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+};
+
+var Form = function (_React$Component) {
+  inherits(Form, _React$Component);
+
+  function Form() {
+    classCallCheck(this, Form);
+    return possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).apply(this, arguments));
+  }
+
+  createClass(Form, [{
+    key: "render",
+    value: function render() {
+      return index.createElement(
+        "div",
         null,
         index.createElement(
-          "tr",
+          "form",
           null,
           index.createElement(
-            "td",
+            "table",
             null,
             index.createElement(
-              "label",
+              "tr",
               null,
-              "Name"
-            )
-          ),
-          index.createElement(
-            "td",
-            null,
-            index.createElement("input", { type: "text" })
-          )
-        ),
-        index.createElement(
-          "tr",
-          null,
-          index.createElement(
-            "td",
-            null,
+              index.createElement(
+                "td",
+                null,
+                index.createElement(
+                  "label",
+                  null,
+                  "Name"
+                )
+              ),
+              index.createElement(
+                "td",
+                null,
+                index.createElement("input", { type: "text" })
+              )
+            ),
             index.createElement(
-              "label",
+              "tr",
               null,
-              "Vorname"
-            )
-          ),
-          index.createElement(
-            "td",
-            null,
-            index.createElement("input", { type: "text" })
-          )
-        ),
-        index.createElement(
-          "tr",
-          null,
-          index.createElement(
-            "td",
-            null,
+              index.createElement(
+                "td",
+                null,
+                index.createElement(
+                  "label",
+                  null,
+                  "Vorname"
+                )
+              ),
+              index.createElement(
+                "td",
+                null,
+                index.createElement("input", { type: "text" })
+              )
+            ),
             index.createElement(
-              "label",
+              "tr",
               null,
-              "Email"
-            )
-          ),
-          index.createElement(
-            "td",
-            null,
-            index.createElement("input", { type: "email" })
-          )
-        ),
-        index.createElement(
-          "tr",
-          null,
-          index.createElement(
-            "td",
-            null,
+              index.createElement(
+                "td",
+                null,
+                index.createElement(
+                  "label",
+                  null,
+                  "Email"
+                )
+              ),
+              index.createElement(
+                "td",
+                null,
+                index.createElement("input", { type: "email" })
+              )
+            ),
             index.createElement(
-              "label",
+              "tr",
               null,
-              "Telefon"
+              index.createElement(
+                "td",
+                null,
+                index.createElement(
+                  "label",
+                  null,
+                  "Telefon"
+                )
+              ),
+              index.createElement(
+                "td",
+                null,
+                index.createElement("input", { type: "phone" })
+              )
             )
-          ),
-          index.createElement(
-            "td",
-            null,
-            index.createElement("input", { type: "phone" })
           )
         )
-      )
-    )
-  );
-};
+      );
+    }
+  }]);
+  return Form;
+}(index.Component);
 
 index$3.render(index.createElement(Form, null), document.getElementById('root'));
