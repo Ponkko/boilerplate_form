@@ -1,6 +1,7 @@
 {
   "name": "boilerplate_form",
   "version": "0.1.0",
+  "main": "dist/bundle.js",
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
