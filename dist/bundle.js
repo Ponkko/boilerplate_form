@@ -563,15 +563,15 @@ var possibleConstructorReturn = function (self, call) {
   return call && (typeof call === "object" || typeof call === "function") ? call : self;
 };
 
-var Form = function (_React$Component) {
-  inherits(Form, _React$Component);
+var FormComponent = function (_React$Component) {
+  inherits(FormComponent, _React$Component);
 
-  function Form() {
-    classCallCheck(this, Form);
-    return possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).apply(this, arguments));
+  function FormComponent() {
+    classCallCheck(this, FormComponent);
+    return possibleConstructorReturn(this, (FormComponent.__proto__ || Object.getPrototypeOf(FormComponent)).apply(this, arguments));
   }
 
-  createClass(Form, [{
+  createClass(FormComponent, [{
     key: "render",
     value: function render() {
       return index.createElement(
@@ -584,75 +584,79 @@ var Form = function (_React$Component) {
             "table",
             null,
             index.createElement(
-              "tr",
+              "tbody",
               null,
               index.createElement(
-                "td",
+                "tr",
                 null,
                 index.createElement(
-                  "label",
+                  "td",
                   null,
-                  "Name"
+                  index.createElement(
+                    "label",
+                    null,
+                    "Name"
+                  )
+                ),
+                index.createElement(
+                  "td",
+                  null,
+                  index.createElement("input", { type: "text" })
                 )
               ),
               index.createElement(
-                "td",
-                null,
-                index.createElement("input", { type: "text" })
-              )
-            ),
-            index.createElement(
-              "tr",
-              null,
-              index.createElement(
-                "td",
+                "tr",
                 null,
                 index.createElement(
-                  "label",
+                  "td",
                   null,
-                  "Vorname"
+                  index.createElement(
+                    "label",
+                    null,
+                    "Vorname"
+                  )
+                ),
+                index.createElement(
+                  "td",
+                  null,
+                  index.createElement("input", { type: "text" })
                 )
               ),
               index.createElement(
-                "td",
-                null,
-                index.createElement("input", { type: "text" })
-              )
-            ),
-            index.createElement(
-              "tr",
-              null,
-              index.createElement(
-                "td",
+                "tr",
                 null,
                 index.createElement(
-                  "label",
+                  "td",
                   null,
-                  "Email"
+                  index.createElement(
+                    "label",
+                    null,
+                    "Email"
+                  )
+                ),
+                index.createElement(
+                  "td",
+                  null,
+                  index.createElement("input", { type: "email" })
                 )
               ),
               index.createElement(
-                "td",
-                null,
-                index.createElement("input", { type: "email" })
-              )
-            ),
-            index.createElement(
-              "tr",
-              null,
-              index.createElement(
-                "td",
+                "tr",
                 null,
                 index.createElement(
-                  "label",
+                  "td",
                   null,
-                  "Telefon"
+                  index.createElement(
+                    "label",
+                    null,
+                    "Telefon"
+                  )
+                ),
+                index.createElement(
+                  "td",
+                  null,
+                  index.createElement("input", { type: "phone" })
                 )
-              ),
-              index.createElement(
-                "td",
-                null,
-                index.createElement("input", { type: "phone" })
               )
             )
           )
@@ -660,7 +664,7 @@ var Form = function (_React$Component) {
       );
     }
   }]);
-  return Form;
+  return FormComponent;
 }(index.Component);
 
-index$3.render(index.createElement(Form, null), document.getElementById('root'));
+index$3.render(index.createElement(FormComponent, null), document.getElementById('root'));
