@@ -4,9 +4,12 @@
   "main": "dist/bundle.js",
   "dependencies": {
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
   },
   "scripts": {
+    "start": "react-scripts start",
+    "build:react": "react-scripts build",
     "dev": "export NODE_ENV=development && rollup -c -w",
     "build": "export NODE_ENV=production && rollup -c",
     "test": "react-scripts test",
@@ -23,5 +26,11 @@
     "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-watch": "^3.2.2"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

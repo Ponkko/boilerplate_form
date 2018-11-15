@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default Form = () => (
+const Form = () => (
   <div>
     <form>
       <table>
@@ -24,3 +24,5 @@ export default Form = () => (
     </form>
   </div>
 );
+
+export default Form;
