@@ -1,25 +1,26 @@
 {
   "name": "boilerplate_form",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-dom": "^16.6.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "export NODE_ENV=development && rollup -c -w",
+    "build": "export NODE_ENV=production && rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-latest": "^6.16.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^3.2.2"
+  }
 }
