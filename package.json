@@ -1,36 +1,31 @@
 {
-  "name": "boilerplate_form",
-  "version": "0.1.0",
-  "main": "dist/bundle.js",
-  "dependencies": {
+  "name": "boilerplate-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/dev.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ponkko/boilerplate_form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "rollup": "^0.67.1",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build:react": "react-scripts build",
-    "dev": "export NODE_ENV=development && rollup -c -w",
-    "build": "export NODE_ENV=production && rollup -c",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "babel-plugin-external-helpers": "^6.18.0",
-    "babel-plugin-transform-react-jsx": "^6.8.0",
-    "babel-preset-latest": "^6.16.0",
-    "rollup": "^0.41.4",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-commonjs": "^7.0.0",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-replace": "^1.1.1",
-    "rollup-plugin-uglify": "^1.0.1",
-    "rollup-watch": "^3.2.2"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "peerDependencies": {
+    "react": ">= 16.6.x"
+  }
 }

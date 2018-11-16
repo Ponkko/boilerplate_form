@@ -1,20 +1,23 @@
-import babel from 'rollup-plugin-babel';
-import commonjs from 'rollup-plugin-commonjs';
-import nodeResolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
+import babel from 'rollup-plugin-babel';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 
-const env = process.env.NODE_ENV;
-
-export default {
-  entry: 'src/index.js',
-  dest: 'dist/bundle.js',
-  format: 'cjs',
+module.exports = {
+  input: "./src/FormComponent.js",
+  output: {
+    file: './lib/dev.js',
+    format: "cjs" 
+  },
   plugins: [
-    nodeResolve(),
-    replace({ 'process.env.NODE_ENV': JSON.stringify(env) }),
-    commonjs(),
-    babel({
-      exclude: 'node_modules/**'
+    replace({
+      "process.env.NODE_ENV": JSON.stringify('dev')
     }),
-  ]
+    babel({
+      exclude: "node_modules/**"
+    }),
+    resolve(),
+    commonjs()
+  ],
+  external: id => /^react|styled-jsx/.test(id)
 };
