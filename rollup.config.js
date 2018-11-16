@@ -6,7 +6,7 @@ import commonjs from 'rollup-plugin-commonjs';
 module.exports = {
   input: "./src/FormComponent.js",
   output: {
-    file: './lib/dev.js',
+    file: './lib/index.js',
     format: "cjs" 
   },
   plugins: [

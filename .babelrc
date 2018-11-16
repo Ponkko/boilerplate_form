@@ -1,8 +1,9 @@
 {
-  "presets": [["latest", {
-    "es2015": {
-      "modules": false
-    }
-  }]],
-  "plugins": ["external-helpers", "transform-react-jsx"]
+  "presets": [
+    ["@babel/preset-env", { "modules": false }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ]
 }
