@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/Phippu/Documents/Web Entwicklung/boilerplate-form/src/Button/Button.scss"],"names":[],"mappings":"AAAA,QACE,UAAU,AACV,qBAAsB,CACvB","file":"main.69443efc.chunk.css","sourcesContent":[".Button {\n  color: red;\n  background-color: blue;\n}"]}

@@ -1,5 +1,5 @@
 import FormComponent from './FormComponent';
-import Button from './Button';
+import Button from './Button/Button';
 
 const components = {
   FormComponent,

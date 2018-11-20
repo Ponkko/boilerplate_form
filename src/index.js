@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FormComponent from './FormComponent';
+import Button from './Button/Button';
 
 ReactDOM.render(
-  <FormComponent />,
+  <Button />,
   document.getElementById('root')
 );
