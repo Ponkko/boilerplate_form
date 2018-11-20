@@ -4,7 +4,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
 module.exports = {
-  input: "./src/FormComponent.js",
+  input: "./src/App.js",
   output: {
     file: './lib/index.js',
     format: "cjs" 
