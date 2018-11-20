@@ -2,8 +2,10 @@ import replace from 'rollup-plugin-replace';
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import sass from 'rollup-plugin-sass';
-import postcss from 'rollup-plugin-postcss-modules'
+import postcss from 'rollup-plugin-postcss';
+import postcssModules from 'postcss-modules';
+
+const cssExportMap = {};
 
 module.exports = {
   input: "./src/App.js",
@@ -20,10 +22,10 @@ module.exports = {
     }),
     resolve(),
     commonjs(),
-    sass(),
     postcss({
-      extract: true,
-  }),
+      modules: true,
+      extract: './lib/index.css',
+    }),
   ],
   external: id => /^react|styled-jsx/.test(id)
 };

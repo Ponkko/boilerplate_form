@@ -1,6 +1,7 @@
 import React from "react";
+import styles from './InputField.css';
 
-class FormComponent extends React.Component {
+class InputField extends React.Component {
   state = { message: "Hello World!" };
 
   changeMessage = (e) => {
@@ -13,10 +14,10 @@ class FormComponent extends React.Component {
     const stateValue = this.state.message;
     return (
       <div>
-        <h1>{this.state.message}</h1>
+        <h1 className={styles.headline}>{this.state.message}</h1>
         <input value={stateValue} onChange={this.changeMessage} />
       </div>
     );
   }
 }
-export default FormComponent;
+export default InputField;

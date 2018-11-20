@@ -1,8 +1,8 @@
-import FormComponent from './FormComponent';
+import InputField from './InputField/InputField';
 import Button from './Button/Button';
 
 const components = {
-  FormComponent,
+  InputField,
   Button,
 };
 
