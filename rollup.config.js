@@ -24,7 +24,7 @@ module.exports = {
     commonjs(),
     postcss({
       modules: true,
-      extract: './lib/index.css',
+      extract: './lib/index.scss',
     }),
   ],
   external: id => /^react|styled-jsx/.test(id)
