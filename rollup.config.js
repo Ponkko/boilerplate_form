@@ -23,8 +23,10 @@ module.exports = {
     resolve(),
     commonjs(),
     postcss({
-      modules: true,
-      extract: './lib/index.scss',
+      modules: {
+        generateScopedName: '[local]',
+      },
+      extract: './lib/boilerplate-form.scss',
     }),
   ],
   external: id => /^react|styled-jsx/.test(id)
