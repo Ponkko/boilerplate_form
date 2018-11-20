@@ -1,14 +1,11 @@
 import React from "react";
 
 class FormComponent extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = { message: "Hello World!" };
-  }
+  state = { message: "Hello World!" };
 
-  changeMessage = function(value) {
+  changeMessage = (e) => {
     this.setState({
-      message: value,
+      message: e.target.value,
     });
   }
 
