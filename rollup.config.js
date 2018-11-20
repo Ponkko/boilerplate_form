@@ -21,7 +21,6 @@ module.exports = {
     commonjs(),
     sass({
       output: true,
-      insert: true,
     }),
   ],
   external: id => /^react|styled-jsx/.test(id)
