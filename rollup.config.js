@@ -2,7 +2,7 @@ import replace from 'rollup-plugin-replace';
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import scss from 'rollup-plugin-scss';
+import sass from 'rollup-plugin-sass';
 
 module.exports = {
   input: "./src/App.js",
@@ -19,8 +19,9 @@ module.exports = {
     }),
     resolve(),
     commonjs(),
-    scss({
-      output: './lib/index.css',
+    sass({
+      output: true,
+      insert: true,
     }),
   ],
   external: id => /^react|styled-jsx/.test(id)
