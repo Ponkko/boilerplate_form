@@ -8,7 +8,7 @@ import postcssModules from 'postcss-modules';
 const cssExportMap = {};
 
 module.exports = {
-  input: "./src/App.js",
+  input: "./src/Components.js",
   output: {
     file: './lib/index.js',
     format: "cjs" 
