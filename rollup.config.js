@@ -23,5 +23,8 @@ module.exports = {
     resolve(),
     commonjs(),
   ],
-  external: id => /^react|styled-components/.test(id)
+  external: [
+    "react",
+    "styled-components"
+  ]
 };
