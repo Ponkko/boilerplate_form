@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import styled from 'styled-components';
-
-const StyledButton = styled.button`
-  color: red;
-  background-color: blue;
-`;
+import { StyledButton, IdButton } from './Button.styled';
 
 class Button extends Component {
   render() {
+    const { context } = this.props;
     return (
-      <StyledButton>Hallo</StyledButton>
+      <div>
+        {
+          context === "id" ? 
+          <IdButton>Id Button</IdButton> :
+          <StyledButton context={context}>Hallo</StyledButton>
+        }
+      </div>
     );
   }
 }
