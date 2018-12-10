@@ -1,10 +1,14 @@
-import React from "react";
-import styles from './Button.css';
+import React, { Component } from "react";
 
-class Button extends React.Component {
+const StyledButton = styled.button`
+  color: red;
+  background-color: blue;
+`;
+
+class Button extends Component {
   render() {
     return (
-      <button className={styles.Button}>Hallo</button>
+      <StyledButton>Hallo</StyledButton>
     );
   }
 }

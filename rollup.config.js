@@ -22,12 +22,6 @@ module.exports = {
     }),
     resolve(),
     commonjs(),
-    postcss({
-      modules: {
-        generateScopedName: '_boardUI_[name]__[local]___[hash:base64:5]',
-      },
-      extract: './lib/boilerplate-form.css',
-    }),
   ],
   external: id => /^react|styled-jsx/.test(id)
 };

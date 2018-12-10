@@ -1,5 +1,8 @@
 import React from "react";
-import styles from './InputField.css';
+
+const Header = styled.h1`
+  color: orange;
+`;
 
 class InputField extends React.Component {
   state = { message: "Hello World!" };
@@ -14,7 +17,7 @@ class InputField extends React.Component {
     const stateValue = this.state.message;
     return (
       <div>
-        <h1 className={styles.headline}>{this.state.message}</h1>
+        <Header>{this.state.message}</Header>
         <input value={stateValue} onChange={this.changeMessage} />
       </div>
     );
